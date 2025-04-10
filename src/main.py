@@ -9,7 +9,7 @@ def main():
     c1.draw()
     c2 = Cell(20, 100, 60, 140, win, True, True, False, True)
     c2.draw()
-    c1.draw_move(c2, True)
+    c1.draw_move(c2)
 
     win.wait_for_close()
 

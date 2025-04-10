@@ -65,4 +65,6 @@ class Cell():
         color = 'red'
         if undo:
             color = 'grey'
-        self.window.draw_line(Line(Point((self.x1 + self.x2) / 2, (self.y1 + self.y2) / 2), Point((to_cell.x1 + to_cell.x2) / 2, (to_cell.y1 + to_cell.y2) / 2)), color)
+        cell_center = Point(abs(self.x1 + self.x2) // 2, abs(self.y1 + self.y2) // 2)
+        to_cell_center = Point(abs(to_cell.x1 + to_cell.x2) // 2, abs(to_cell.y1 + to_cell.y2) // 2)
+        self.window.draw_line(Line(cell_center, to_cell_center), color)
