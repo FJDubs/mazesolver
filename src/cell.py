@@ -11,6 +11,7 @@ class Cell():
         self.has_right_wall = r_wall
         self.has_top_wall = t_wall
         self.has_bottom_wall = b_wall
+        self.visited = False
 
     def draw(self) -> None:
         if self.has_left_wall:
@@ -27,7 +28,7 @@ class Cell():
             self.window.draw_line(Line(Point(self.x1,self.y1), Point(self.x2, self.y1)))
         else:
             self.window.draw_line(Line(Point(self.x1,self.y1), Point(self.x2, self.y1)), 'white')
-            
+
         if self.has_bottom_wall:
             self.window.draw_line(Line(Point(self.x1,self.y2), Point(self.x2, self.y2)))
         else:
